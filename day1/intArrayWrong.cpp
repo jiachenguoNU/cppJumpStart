@@ -5,22 +5,22 @@
 class IntArray {
 public:
     IntArray(size_t size);  //constructor
-    ~IntArray();            //destructor
-    int& operator[](size_t index);       //operator overloading
-    size_t size() const;                 //return size
-private:
-    int* data_;
-    size_t size_;
-};
+        ~IntArray();            //destructor
+            int& operator[](size_t index);       //operator overloading
+                size_t size() const;                 //return size
+                private:
+                    int* data_;
+                        size_t size_;
+                        };
 
 inline IntArray::IntArray(size_t size){
     int* data_ = new int[size];               //这里错了
     int i;
     for (i = 0; i < (int)size; i++){
         *(data_ + i ) = 0;
-                                //这里错了，要放在循环外边
+    size_ = size;                             //这里错了，要放在循环外边
     }
-    size_ = size; 
+    
 }
 
 IntArray::~IntArray(){delete [] data_;}   //这里没有必要用inline，又不是头文件

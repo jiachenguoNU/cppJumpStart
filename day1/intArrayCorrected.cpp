@@ -16,7 +16,7 @@ private:
 inline IntArray::IntArray(size_t size){
     data_ = new int[size];               //这里错了, 去掉声明 有声明的话等于新生成了一个
     int i;
-    for (i = 0; i < (int)size; i++){
+    for (i = 0; i < static_cast<int>(size); i++){
         *(data_ + i ) = 0;
     
     }
