@@ -16,6 +16,7 @@ IntArray::IntArray(IntArray&A){   //deep copy
 }
 
 IntArray::IntArray(IntArray&& A){
+    cout<<"move constructor called \n";
     data_ = A.data_;
     size_ = A.size();
     A.data_ = nullptr;

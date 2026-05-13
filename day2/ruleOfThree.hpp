@@ -3,6 +3,7 @@ using namespace std;
 
 class IntArray{
     public:
+    
     IntArray(size_t size); //{};//cannot add these brackets here;
     ~IntArray(); //cannot define twice if using inline
 

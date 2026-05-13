@@ -7,6 +7,9 @@ int main(){
     std::cout<<A.value <<" "<<A.ref<<"\n";
     ++A;
     std::cout<<A.value <<" "<<A.ref<<"\n";
+
+    
+
     return 0;
 
 
